@@ -20,16 +20,15 @@ public class MovimientoServicio {
         return (ArrayList<MovimientoModelo>) movimientoRepositorio.findAll();
     }
 
+    public Optional<MovimientoModelo> obtenerPorId(Long id) {
+        return movimientoRepositorio.findById(id);
+    }
     public MovimientoModelo guardarMovimiento(MovimientoModelo movimientoDinero){
         return movimientoRepositorio.save(movimientoDinero);
     }
 
     public void eliminarMovimiento(Long id){
         movimientoRepositorio.deleteById(id);
-    }
-
-    public Optional<MovimientoModelo> obtenerPorId(Long id) {
-        return movimientoRepositorio.findById(id);
     }
 
     public List<MovimientoModelo> MovimientoModeloList() {

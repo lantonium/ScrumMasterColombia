@@ -32,7 +32,8 @@ public class MovimientoController {
     }
 
     @DeleteMapping("/eliminar/{id}")
-    private void eliminarMovimiento(@PathVariable("id") Long id){
+    private String eliminarMovimiento(@PathVariable("id") Long id){
         this.movimientoServicio.eliminarMovimiento(id);
+        return "redirect:/crud";
     }
 }

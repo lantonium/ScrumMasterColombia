@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>FrontEnd Sprint 4 - Luis Gonzalez</title>
+</head>
+<body>
+    <main>
+        <div class="px-4 py-5 ny-5">
+            <h1>FrontEnd Sprint 4 - Luis Gonzalez</h1>
+            <h2>Equipo Scrum Master Colombia</h2>
+            <div class="col-lg-6 nx-auto">
+                <img src="img/coding.png" class="dblock nx-auto" height="60" alt="Tareas"> 
+                <div sec:authorize="!isAuthenticated()">
+                    <a class="btn btn-primary" th:href="@{/oauth2/authorization/auth0}">Iniciar sesion</a>
+                </div>
+                <div sec:authorize="isAuthenticated()">
+                    <p></p>
+                    <p>¡Estás conectado!!</p>
+                    <p></p>
+                    <a class="btn btn-primary" href="/crud">Ir a la Aplicacion</a>
+                    <p></p>
+                    <p></p>
+                    <a class="btn btn-primary" th:href="@{/logout}">Cerrar sesion</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns.th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>CRUD Base de Datos</title>
+</head>
+<body>
+    <main>
+        <div class="px-4 py-5 ny-5">
+            <h1>CRUD Base de Datos</h1>
+            <h2>Equipo Scrum Master Colombia</h2>
+            <div class="col-lg-6 nx-auto">
+            <img src="img/programmer.png" class="dblock nx-auto" height="60" alt="Tareas"> 
+            </div>            
+        </div>
+        <div class="d-flex gap-4 justify content-center">
+            <div class="card" style="width: 18rem;">
+                <img class="create" src="img/create.png" height="60" width="60" alt="Crear">
+                <div class="card-body">
+                  <h5 class="card-title">Crear registro</h5>
+                  <p class="card-text">Crear</p>
+                  <a href="/movimiento/guardar" class="btn btn-primary">Crear</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img class="read" src="img/read.png" height="60" width="60" alt="Obtener">
+                <div class="card-body">
+                  <h5 class="card-title">Obtener Registros</h5>
+                  <p class="card-text">Obtener</p>
+                  <a href="/movimiento/obtener" class="btn btn-primary">Obtener</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img class="update.png" src="img/update.png" height="60" width="60" alt="Actualizar">
+                <div class="card-body">
+                  <h5 class="card-title">Actualizar</h5>
+                  <p class="card-text">Actualiza Registro</p>
+                  <a href="/movimiento/Actualizar" class="btn btn-primary">Actualizar</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img class="delete.png" src="img/delete.png" height="60" width="60" alt="Eliminar Registro">
+                <div class="card-body">
+                  <h5 class="card-title">Eliminar Registro</h5>
+                  <p class="card-text">Eliminar Registro por ID</p>
+                  <a href="/movimiento/eliminar" class="btn btn-primary">Eliminar</a>
+                </div>
+              </div>
+        </div>
+        <p></p>
+        <a href="/" class="btn btn-primary">Regresar</a>
+        <p></p>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>
